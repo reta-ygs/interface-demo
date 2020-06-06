@@ -24,4 +24,9 @@ public class CalculatorImpl implements DayOfWeekCalculator {
 				.plusDays(dayOffset)
 				.getDayOfWeek();
 	}
+
+	@Override
+	public boolean isHolidayToday() {
+		return false;
+	}
 }

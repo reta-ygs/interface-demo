@@ -8,4 +8,12 @@ public class Main {
 		System.out.println(calculator.today());
 		System.out.println(calculator.dayOffset(7));
 	}
+
+	static String holiday(DayOfWeekCalculator calculator) {
+		if (calculator.isHolidayToday()) {
+			return "Holiday!";
+		} else {
+			return "はたらけ";
+		}
+	}
 }
