@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '0.1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+task pojo(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "com.example.Main"
+}
+task spring(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "com.example.SpringMain"
+}
+
+dependencies {
+    implementation group: 'org.springframework', name: 'spring-context-support', version: '5.2.6.RELEASE'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.5.2'
+}
